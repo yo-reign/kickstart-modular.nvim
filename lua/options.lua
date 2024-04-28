@@ -7,7 +7,7 @@
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -57,6 +57,15 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 15
+
+-- For obsidian plugin
+vim.opt.conceallevel = 1
+
+-- Set tab defaults
+vim.opt.tabstop = 4 -- Number of spaces that a <Tab> in the file counts for
+vim.opt.shiftwidth = 4 -- Size of an indent
+vim.opt.softtabstop = 4 -- Number of spaces a tab counts for while performing editing operations, like inserting a tab or using <BS>
+vim.opt.expandtab = true -- Converts tabs to spaces
 
 -- vim: ts=2 sts=2 sw=2 et

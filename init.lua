@@ -63,7 +63,7 @@ Kickstart Guide:
     This should be the first place you go to look when you're stuck or confused
     with something. It's one of my favorite Neovim features.
 
-    MOST IMPORTANTLY, we provide a keymap "<space>sh" to [s]earch the [h]elp documentation,
+    MOST IMPORTANTLY, we provide a keymap "<space>fh" to [f]ind the [h]elp documentation,
     which is very useful when you're not exactly sure of what you're looking for.
 
   I have left several `:help X` comments throughout the init.lua
@@ -71,7 +71,6 @@ Kickstart Guide:
     plugins or Neovim features used in Kickstart.
 
    NOTE: Look for lines like this
-
     Throughout the file. These are for you, the reader, to help you understand what is happening.
     Feel free to delete them once you know what you're doing, but they should serve as a guide
     for when you are first encountering a few different constructs in your Neovim config.
@@ -91,7 +90,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 require 'options'

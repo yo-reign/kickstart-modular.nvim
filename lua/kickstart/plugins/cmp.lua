@@ -66,13 +66,18 @@ return {
           -- Accept ([y]es) the completion.
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
-          ['<C-y>'] = cmp.mapping.confirm { select = true },
+          --['<C-y>'] = cmp.mapping.confirm { select = true },
 
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
           --['<CR>'] = cmp.mapping.confirm { select = true },
           --['<Tab>'] = cmp.mapping.select_next_item(),
           --['<S-Tab>'] = cmp.mapping.select_prev_item(),
+
+          -- Reign's:
+          ['<C-y>'] = cmp.mapping.confirm { select = false },
+          ['<Tab>'] = cmp.mapping.confirm { select = true },
+          --['<S-Tab>'] = cmp.mapping.select_next_item(),  -- now being used for Copilot accept
 
           -- Manually trigger a completion from nvim-cmp.
           --  Generally you don't need this, because nvim-cmp will display
@@ -87,6 +92,7 @@ return {
           --
           -- <c-l> will move you to the right of each of the expansion locations.
           -- <c-h> is similar, except moving you backwards.
+          -- FIXME: Harpoon currently overlaps these keybinds
           ['<C-l>'] = cmp.mapping(function()
             if luasnip.expand_or_locally_jumpable() then
               luasnip.expand_or_jump()

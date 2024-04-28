@@ -145,7 +145,13 @@ return {
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       local servers = {
-        -- clangd = {},
+        clangd = {
+          cmd = { 'clangd', '--fallback-style=webkit' },
+          capabilities = {
+            offsetEncoding = { 'utf-16' }, -- HACK: This is a workaround for a bug when using clangd and copilot
+          },
+        },
+        cmake = {},
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
@@ -187,6 +193,8 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'clangd', -- Used to format C/C++ code
+        'markdownlint', -- Used to lint markdown files
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

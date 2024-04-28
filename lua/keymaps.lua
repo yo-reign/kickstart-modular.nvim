@@ -1,6 +1,11 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
+--  Reign's keymaps
+vim.keymap.set('i', 'jk', '<Esc>')
+vim.keymap.set('n', 'H', '_')
+vim.keymap.set('n', 'L', 'g_')
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
