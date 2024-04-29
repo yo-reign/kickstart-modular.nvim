@@ -135,6 +135,9 @@ return {
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
+      -- For godot - gdscript:
+      require('lspconfig').gdscript.setup(capabilities)
+
       -- Enable the following language servers
       --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
       --
@@ -193,7 +196,6 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
-        'clangd', -- Used to format C/C++ code
         'markdownlint', -- Used to lint markdown files
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }

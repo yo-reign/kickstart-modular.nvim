@@ -41,10 +41,28 @@ return {
       -- online, please don't ask me how to install them :)
       ensure_installed = {
         -- Update this to ensure that you have the debuggers for the langs you want
-        'delve',
+        --'delve',
         'codelldb',
       },
     }
+
+    -- Godot debugger setup
+    dap.adapters.godot = {
+      type = 'server',
+      host = '127.0.0.1',
+      port = 6007,
+    }
+
+    dap.configurations.gdscript = {
+      {
+        type = 'godot',
+        request = 'launch',
+        name = 'Launch scene',
+        program = '${workspaceFolder}',
+        launch_scene = true,
+      },
+    }
+    -- END Godot debugger setup
 
     -- Basic debugging keymaps, feel free to change to your liking!
     vim.keymap.set('n', '<F5>', dap.continue, { desc = 'Debug: Start/Continue' })
