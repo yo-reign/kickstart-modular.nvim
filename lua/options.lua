@@ -63,6 +63,9 @@ vim.opt.scrolloff = 15
 -- For obsidian plugin
 vim.opt.conceallevel = 1
 
+-- Enable true color support
+vim.opt.termguicolors = true
+
 -- Set tab defaults
 vim.opt.tabstop = 4 -- Number of spaces that a <Tab> in the file counts for
 vim.opt.shiftwidth = 4 -- Size of an indent
