@@ -6,6 +6,10 @@ vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set('n', 'H', '_')
 vim.keymap.set('n', 'L', 'g_')
 
+-- Mapping <leader>y to yank into the system clipboard:
+vim.api.nvim_set_keymap('n', '<leader>y', '"+y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true, silent = true })
+
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
