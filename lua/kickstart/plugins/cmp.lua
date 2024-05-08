@@ -75,9 +75,9 @@ return {
           --['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
           -- Reign's:
-          ['<C-y>'] = cmp.mapping.confirm { select = false },
-          ['<Tab>'] = cmp.mapping.confirm { select = true },
-          --['<S-Tab>'] = cmp.mapping.select_next_item(),  -- now being used for Copilot accept
+          ['<C-y>'] = cmp.mapping.confirm { select = true },
+          ['<Tab>'] = cmp.mapping.select_next_item(),
+          --['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
           -- Manually trigger a completion from nvim-cmp.
           --  Generally you don't need this, because nvim-cmp will display

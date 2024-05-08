@@ -41,4 +41,9 @@ return {
       return suffix
     end,
   },
+  config = function(_, opts)
+    require('obsidian').setup(opts)
+    vim.keymap.set('n', '<leader>of', '<cmd>ObsidianSearch<CR>')
+    vim.keymap.set('n', '<leader>ob', '<cmd>ObsidianBacklinks<CR>')
+  end,
 }
