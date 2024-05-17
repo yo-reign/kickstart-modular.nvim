@@ -45,5 +45,9 @@ return {
     require('obsidian').setup(opts)
     vim.keymap.set('n', '<leader>of', '<cmd>ObsidianSearch<CR>')
     vim.keymap.set('n', '<leader>ob', '<cmd>ObsidianBacklinks<CR>')
+    vim.keymap.set('n', '<leader>ot', '<cmd>ObsidianTags<CR>')
+    vim.keymap.set('n', '<leader>oc', '<cmd>ObsidianCheck<CR>')
+    vim.keymap.set('n', '<leader>ol', '<cmd>ObsidianLinks<CR>')
+    vim.keymap.set('n', '<leader>oi', '<cmd>ObsidianPasteImg<CR>')
   end,
 }
