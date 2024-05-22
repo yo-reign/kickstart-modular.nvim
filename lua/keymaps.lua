@@ -5,6 +5,7 @@
 vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set('n', 'H', '_')
 vim.keymap.set('n', 'L', 'g_')
+vim.keymap.set('n', '<leader>sc', '<cmd>set spell!<CR>', { desc = 'Toggle [S]pell [C]hecking' })
 
 -- Mapping <leader>y to yank into the system clipboard:
 vim.api.nvim_set_keymap('n', '<leader>y', '"+y', { noremap = true, silent = true })

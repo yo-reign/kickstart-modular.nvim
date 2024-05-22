@@ -3,6 +3,10 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+-- For spell checking
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = false -- There is a keybinding to toggle this in keymappings.lua
+
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
