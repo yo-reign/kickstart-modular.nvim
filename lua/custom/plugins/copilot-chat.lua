@@ -92,6 +92,7 @@ return {
       vim.keymap.set('v', '<leader>cc', '<cmd>:CopilotChatToggle<CR>')
       vim.keymap.set('v', '<leader>ce', '<cmd>:CopilotChatExplain<CR>')
       vim.keymap.set('v', '<leader>cd', '<cmd>:CopilotChatDocs<CR>')
+      vim.keymap.set('v', '<leader>cf', '<cmd>:CopilotChatFix<CR>')
     end,
   },
 }
