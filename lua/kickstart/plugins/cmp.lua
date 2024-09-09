@@ -113,6 +113,7 @@ return {
           { name = 'luasnip' },
           { name = 'path' },
           { name = 'calc' },
+          --{ name = 'supermaven' },
         },
       }
 
