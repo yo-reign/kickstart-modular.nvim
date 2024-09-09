@@ -90,8 +90,6 @@ vim.cmd [[
   highlight RenderMarkdownH4Bg guibg=#3c3836
   highlight RenderMarkdownH5Bg guibg=#3c3836
   highlight RenderMarkdownH6Bg guibg=#3c3836
-  highlight RenderMarkdownCode guifg=#ebdbb2 guibg=#3c3836 gui=italic
-  highlight RenderMarkdownCodeInline guifg=#ebdbb2 guibg=#3c3836 gui=italic
   highlight RenderMarkdownBullet guifg=#83a598
   highlight RenderMarkdownQuote guifg=#83a598 gui=italic
   highlight RenderMarkdownDash guifg=#928374

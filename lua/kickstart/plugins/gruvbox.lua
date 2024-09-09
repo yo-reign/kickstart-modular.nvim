@@ -35,6 +35,7 @@ return {
         palette_overrides = {},
         overrides = {
           SignColumn = { bg = '#1d2021' },
+          String = { fg = '#b8bb26' },
         },
         dim_inactive = false,
         transparent_mode = false,
