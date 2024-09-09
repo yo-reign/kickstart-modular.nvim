@@ -76,4 +76,37 @@ vim.opt.shiftwidth = 4 -- Size of an indent
 vim.opt.softtabstop = 4 -- Number of spaces a tab counts for while performing editing operations, like inserting a tab or using <BS>
 vim.opt.expandtab = true -- Converts tabs to spaces
 
--- vim: ts=2 sts=2 sw=2 et
+-- Set gruvbox colors for markdown preview
+vim.cmd [[
+  highlight RenderMarkdownH1 guifg=#fb4934 gui=bold
+  highlight RenderMarkdownH2 guifg=#fabd2f gui=bold
+  highlight RenderMarkdownH3 guifg=#8ec07c gui=bold
+  highlight RenderMarkdownH4 guifg=#d3869b gui=bold
+  highlight RenderMarkdownH5 guifg=#b8bb26 gui=bold
+  highlight RenderMarkdownH6 guifg=#83a598 gui=bold
+  highlight RenderMarkdownH1Bg guibg=#3c3836
+  highlight RenderMarkdownH2Bg guibg=#3c3836
+  highlight RenderMarkdownH3Bg guibg=#3c3836
+  highlight RenderMarkdownH4Bg guibg=#3c3836
+  highlight RenderMarkdownH5Bg guibg=#3c3836
+  highlight RenderMarkdownH6Bg guibg=#3c3836
+  highlight RenderMarkdownCode guifg=#ebdbb2 guibg=#3c3836 gui=italic
+  highlight RenderMarkdownCodeInline guifg=#ebdbb2 guibg=#3c3836 gui=italic
+  highlight RenderMarkdownBullet guifg=#83a598
+  highlight RenderMarkdownQuote guifg=#83a598 gui=italic
+  highlight RenderMarkdownDash guifg=#928374
+  highlight RenderMarkdownLink guifg=#b8bb26 gui=underline
+  highlight RenderMarkdownSign guifg=#ebdbb2 guibg=#3c3836
+  highlight RenderMarkdownMath guifg=#fe8019
+  highlight RenderMarkdownUnchecked guifg=#fb4934
+  highlight RenderMarkdownChecked guifg=#b8bb26
+  highlight RenderMarkdownTodo guifg=#fabd2f
+  highlight RenderMarkdownTableHead guifg=#ebdbb2 gui=bold
+  highlight RenderMarkdownTableRow guifg=#ebdbb2
+  highlight RenderMarkdownTableFill guifg=#ebdbb2
+  highlight RenderMarkdownSuccess guifg=#b8bb26
+  highlight RenderMarkdownInfo guifg=#83a598
+  highlight RenderMarkdownHint guifg=#fe8019
+  highlight RenderMarkdownWarn guifg=#fabd2f
+  highlight RenderMarkdownError guifg=#fb4934
+]]
