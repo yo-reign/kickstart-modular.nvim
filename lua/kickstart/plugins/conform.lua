@@ -4,12 +4,12 @@ return {
     lazy = false,
     keys = {
       {
-        '<leader>fb',
+        '<leader>bf',
         function()
           require('conform').format { async = true, lsp_fallback = true }
         end,
         mode = '',
-        desc = '[F]ormat [B]uffer',
+        desc = '[B]uffer [F]ormat',
       },
     },
     opts = {
