@@ -58,4 +58,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- For moving highlighted text regions up and down
+vim.keymap.set('v', '<C-k>', ":m '<-2<CR>gv=gv", { desc = 'Move highlighted region up one line' })
+vim.keymap.set('v', '<C-j>', ":m '>+1<CR>gv=gv", { desc = 'Move highlighted region down one line' })
+
 -- vim: ts=2 sts=2 sw=2 et
