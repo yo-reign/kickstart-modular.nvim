@@ -7,14 +7,12 @@ return {
       { 'nvim-lua/plenary.nvim' }, -- for curl, log wrapper
     },
     opts = {
-      --debug = true, -- Enable debugging
-      -- See Configuration section for rest
       debug = false, -- Enable debug logging
       proxy = nil, -- [protocol://]host[:port] Use this proxy
       allow_insecure = false, -- Allow insecure server connections
 
       --system_prompt = prompts.COPILOT_INSTRUCTIONS, -- System prompt to use
-      model = 'gpt-4o', -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o'
+      model = 'o1-mini', -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o'
       temperature = 0.1, -- GPT temperature
 
       question_header = '## User ', -- Header to use for user questions

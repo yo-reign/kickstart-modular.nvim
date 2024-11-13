@@ -34,7 +34,7 @@ return {
       },
       filetypes = {
         yaml = false,
-        markdown = true, -- Testing copilot with obsidian notes
+        markdown = false,
         help = false,
         gitcommit = false,
         gitrebase = false,
