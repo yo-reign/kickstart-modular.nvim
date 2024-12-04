@@ -12,7 +12,7 @@ return {
       allow_insecure = false, -- Allow insecure server connections
 
       --system_prompt = prompts.COPILOT_INSTRUCTIONS, -- System prompt to use
-      model = 'o1-mini', -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o'
+      model = 'gpt-4o', -- GPT model to use, 'gpt-3.5-turbo', 'gpt-4', or 'gpt-4o'
       temperature = 0.1, -- GPT temperature
 
       question_header = '## User ', -- Header to use for user questions
