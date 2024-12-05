@@ -191,6 +191,14 @@ return {
             },
           },
         },
+
+        -- Included for use of html-lsp and htmx-lsp with .zmpl files (Jetzig Templater)
+        html = {
+          filetypes = { 'html', 'htm', 'zmpl' },
+        },
+        htmx = {
+          filetypes = { 'htmx', 'zmpl' },
+        },
       }
 
       -- Ensure the servers and tools above are installed
