@@ -197,7 +197,10 @@ return {
           filetypes = { 'html', 'htm', 'zmpl' },
         },
         htmx = {
-          filetypes = { 'htmx', 'zmpl' },
+          filetypes = { 'html', 'htm', 'htmx', 'zmpl' },
+        },
+        tailwindcss = {
+          filetypes = { 'html', 'htm', 'css', 'zmpl' },
         },
       }
 
