@@ -48,7 +48,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- CUSTOM --
 vim.keymap.set("i", "jk", "<Esc>")
-vim.keymap.set("i", "<leader>ts", "<cmd>set spell!<CR>", { desc = "[T]oggle [S]pell check" })
+vim.keymap.set("n", "<leader>ts", "<cmd>set spell!<CR>", { desc = "[T]oggle [S]pell check" })
 
 -- Mapping <leader>y to yank into the system clipboard:
 vim.api.nvim_set_keymap("n", "<leader>y", '"+y', { noremap = true, silent = true })
