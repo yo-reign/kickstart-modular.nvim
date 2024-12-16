@@ -4,7 +4,7 @@
 --  For more options, you can see `:help option-list`
 
 -- For spell checking
-vim.opt.spelllang = 'en_us'
+vim.opt.spelllang = "en_us"
 vim.opt.spell = false -- There is a keybinding to toggle this in keymappings.lua
 
 -- Make line numbers default
@@ -14,7 +14,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
@@ -36,7 +36,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 -- Decrease update time
 vim.opt.updatetime = 250
@@ -53,10 +53,10 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = "split"
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
@@ -75,36 +75,3 @@ vim.opt.tabstop = 4 -- Number of spaces that a <Tab> in the file counts for
 vim.opt.shiftwidth = 4 -- Size of an indent
 vim.opt.softtabstop = 4 -- Number of spaces a tab counts for while performing editing operations, like inserting a tab or using <BS>
 vim.opt.expandtab = true -- Converts tabs to spaces
-
--- Set gruvbox colors for markdown preview
-vim.cmd [[
-  highlight RenderMarkdownH1 guifg=#fb4934 gui=bold
-  highlight RenderMarkdownH2 guifg=#fabd2f gui=bold
-  highlight RenderMarkdownH3 guifg=#8ec07c gui=bold
-  highlight RenderMarkdownH4 guifg=#d3869b gui=bold
-  highlight RenderMarkdownH5 guifg=#b8bb26 gui=bold
-  highlight RenderMarkdownH6 guifg=#83a598 gui=bold
-  highlight RenderMarkdownH1Bg guibg=#3c3836
-  highlight RenderMarkdownH2Bg guibg=#3c3836
-  highlight RenderMarkdownH3Bg guibg=#3c3836
-  highlight RenderMarkdownH4Bg guibg=#3c3836
-  highlight RenderMarkdownH5Bg guibg=#3c3836
-  highlight RenderMarkdownH6Bg guibg=#3c3836
-  highlight RenderMarkdownBullet guifg=#83a598
-  highlight RenderMarkdownQuote guifg=#83a598 gui=italic
-  highlight RenderMarkdownDash guifg=#928374
-  highlight RenderMarkdownLink guifg=#b8bb26 gui=underline
-  highlight RenderMarkdownSign guifg=#ebdbb2 guibg=#3c3836
-  highlight RenderMarkdownMath guifg=#fe8019
-  highlight RenderMarkdownUnchecked guifg=#fb4934
-  highlight RenderMarkdownChecked guifg=#b8bb26
-  highlight RenderMarkdownTodo guifg=#fabd2f
-  highlight RenderMarkdownTableHead guifg=#ebdbb2 gui=bold
-  highlight RenderMarkdownTableRow guifg=#ebdbb2
-  highlight RenderMarkdownTableFill guifg=#ebdbb2
-  highlight RenderMarkdownSuccess guifg=#b8bb26
-  highlight RenderMarkdownInfo guifg=#83a598
-  highlight RenderMarkdownHint guifg=#fe8019
-  highlight RenderMarkdownWarn guifg=#fabd2f
-  highlight RenderMarkdownError guifg=#fb4934
-]]
