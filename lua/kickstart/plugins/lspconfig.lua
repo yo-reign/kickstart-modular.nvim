@@ -177,9 +177,9 @@ return {
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 
 			-- CUSTOM
-			-- Setup custom zls lsp exe (zls-nightly-bin in aur)
+			-- Setup custom zls lsp (currently pointing to zvm's bin which auto symlinks to different versions)
 			require("lspconfig").zls.setup({
-				cmd = { "/usr/bin/zls" },
+				cmd = { "~/.zvm/bin/zls" },
 			})
 
 			-- Enable the following language servers
