@@ -58,4 +58,13 @@ vim.api.nvim_set_keymap("v", "<leader>y", '"+y', { noremap = true, silent = true
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
 
+-- Toggle between gruvbox and tokyonight colorschemes
+vim.keymap.set("n", "<leader>tc", function()
+	if vim.g.colors_name == "gruvbox" then
+		vim.cmd("colorscheme tokyonight")
+	else
+		vim.cmd("colorscheme gruvbox")
+	end
+end)
+
 -- vim: ts=2 sts=2 sw=2 et
