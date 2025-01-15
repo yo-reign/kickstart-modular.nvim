@@ -65,6 +65,6 @@ vim.keymap.set("n", "<leader>tc", function()
 	else
 		vim.cmd("colorscheme gruvbox")
 	end
-end)
+end, { desc = "Toggle between Gruvbox and Tokyonight colorschemes" })
 
 -- vim: ts=2 sts=2 sw=2 et
