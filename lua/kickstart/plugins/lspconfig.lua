@@ -260,6 +260,13 @@ return {
 					end,
 				},
 			})
+
+			local gd_script_server_config = {
+				completion = { completeopt = "menu,menuone" },
+			}
+			gd_script_server_config.capabilities =
+				vim.tbl_deep_extend("force", {}, capabilities, gd_script_server_config.capabilities or {})
+			require("lspconfig")["gdscript"].setup(gd_script_server_config)
 		end,
 	},
 }
