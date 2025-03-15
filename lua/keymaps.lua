@@ -67,4 +67,7 @@ vim.keymap.set("n", "<leader>tc", function()
 	end
 end, { desc = "Toggle between Gruvbox and Tokyonight colorschemes" })
 
+-- Save buffer (without formatting)
+vim.keymap.set("n", "<leader>bw", ":noautocmd write<CR>", { desc = "Save buffer (without formatting)" })
+
 -- vim: ts=2 sts=2 sw=2 et
