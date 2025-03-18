@@ -222,14 +222,15 @@ return {
 				},
 
 				-- Included for use of html-lsp and htmx-lsp with .zmpl files (Jetzig Templater)
+				-- Also for tsx (react stuff)
 				html = {
-					filetypes = { "html", "htm", "zmpl" },
+					filetypes = { "html", "htm", "typescriptreact", "typescript.tsx", "zmpl" },
 				},
 				htmx = {
 					filetypes = { "html", "htm", "htmx", "zmpl" },
 				},
 				tailwindcss = {
-					filetypes = { "html", "htm", "css", "zmpl" },
+					filetypes = { "html", "htm", "css", "typescriptreact", "typescript.tsx", "zmpl" },
 				},
 			}
 
