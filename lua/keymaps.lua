@@ -70,4 +70,16 @@ end, { desc = "Toggle between Gruvbox and Tokyonight colorschemes" })
 -- Save buffer (without formatting)
 vim.keymap.set("n", "<leader>bw", ":noautocmd write<CR>", { desc = "Save buffer (without formatting)" })
 
+-- Toggle between 2 and 4 tab settings
+vim.keymap.set("n", "<leader>tt", function()
+	if vim.bo.shiftwidth == 2 then
+		vim.bo.shiftwidth = 4
+		vim.bo.tabstop = 4
+	else
+		vim.bo.shiftwidth = 2
+		vim.bo.tabstop = 2
+	end
+	print("Tab settings: shiftwidth=" .. vim.bo.shiftwidth .. ", tabstop=" .. vim.bo.tabstop)
+end, { desc = "[T]oggle [T]ab size" })
+
 -- vim: ts=2 sts=2 sw=2 et
