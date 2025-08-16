@@ -182,6 +182,18 @@ return {
 			require("lspconfig").zls.setup({
 				cmd = { "zls" },
 			})
+			-- require("lspconfig").zls.setup({
+			-- 	cmd = { "zls" },
+			-- 	settings = {
+			-- 		zls = {
+			-- 			enable_inlay_hints = true,
+			-- 			inlay_hints_show_builtin = true,
+			-- 			inlay_hints_exclude_single_argument = true,
+			-- 			inlay_hints_hide_redundant_param_names = false,
+			-- 			inlay_hints_hide_redundant_param_names_last_token = false,
+			-- 		},
+			-- 	},
+			-- })
 
 			-- Enable the following language servers
 			--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
@@ -223,6 +235,7 @@ return {
 
 				-- Included for use of html-lsp and htmx-lsp with .zmpl files (Jetzig Templater)
 				-- Also for tsx (react stuff)
+				-- FIXME: Change my html language server!!!! find alternative immediately!
 				html = {
 					filetypes = { "html", "htm", "typescriptreact", "typescript.tsx", "zmpl" },
 				},

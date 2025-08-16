@@ -4,33 +4,16 @@ return {
 	version = false, -- Never set this value to "*"! Never!
 	opts = {
 		---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
-		provider = "gemini", -- The provider used in Aider mode or in the planning phase of Cursor Planning Mode
-		-- WARNING: Since auto-suggestions are a high-frequency operation and therefore expensive,
-		-- currently designating it as `copilot` provider is dangerous because: https://github.com/yetone/avante.nvim/issues/1048
-		-- Of course, you can reduce the request frequency by increasing `suggestion.debounce`.
-		auto_suggestions_provider = "gemini",
-		cursor_applying_provider = "gemini", -- The provider used in the applying phase of Cursor Planning Mode, defaults to nil, when nil uses Config.provider as the provider for the applying phase
-		-- claude = {
-		-- 	endpoint = "https://api.anthropic.com",
-		-- 	model = "claude-3-5-sonnet-20241022",
-		-- 	temperature = 0,
-		-- 	max_tokens = 4096,
-		-- },
-		gemini = {
-			--model = "gemini-2.0-flash", -- your desired model (or use gpt-4o, etc.)
-			model = "gemini-2.5-pro-exp-03-25", -- your desired model (or use gpt-4o, etc.)
-			timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
-			temperature = 0.1,
-			max_tokens = 32768, -- Increase this to include reasoning tokens (for reasoning models)
-			--reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
+
+		provider = "openrouter",
+		providers = {
+			openrouter = {
+				__inherited_from = "openai",
+				endpoint = "https://openrouter.ai/api/v1",
+				api_key_name = "OPENROUTER_API_KEY",
+				model = "qwen/qwen3-coder",
+			},
 		},
-		-- gemini = {
-		-- 	model = "gemini-2.5-pro-exp-03-25", -- your desired model (or use gpt-4o, etc.)
-		-- 	timeout = 120000, -- Timeout in milliseconds, increase this for reasoning models
-		-- 	temperature = 0.1,
-		-- 	max_tokens = 32768, -- Increase this to include reasoning tokens (for reasoning models)
-		-- 	--reasoning_effort = "high", -- low|medium|high, only used for reasoning models
-		-- },
 		---Specify the special dual_boost mode
 		---1. enabled: Whether to enable dual_boost mode. Default to false.
 		---2. first_provider: The first provider to generate response. Default to "openai".
@@ -51,8 +34,8 @@ return {
 			auto_suggestions = false, -- Experimental stage
 			auto_set_highlight_group = true,
 			auto_set_keymaps = true,
-			auto_apply_diff_after_generation = true,
-			support_paste_from_clipboard = false,
+			auto_apply_diff_after_generation = false,
+			support_paste_from_clipboard = true,
 			minimize_diff = true, -- Whether to remove unchanged lines when applying a code block
 			enable_token_counting = true, -- Whether to enable token counting. Default to true.
 			enable_cursor_planning_mode = false, -- Whether to enable Cursor Planning Mode. Default to false.

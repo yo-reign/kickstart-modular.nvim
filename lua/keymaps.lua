@@ -47,7 +47,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- CUSTOM --
-vim.keymap.set("i", "jk", "<Esc>")
+-- vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("n", "<leader>ts", "<cmd>set spell!<CR>", { desc = "[T]oggle [S]pell check" })
 
 -- Mapping <leader>y to yank into the system clipboard:
@@ -81,5 +81,9 @@ vim.keymap.set("n", "<leader>tt", function()
 	end
 	print("Tab settings: shiftwidth=" .. vim.bo.shiftwidth .. ", tabstop=" .. vim.bo.tabstop)
 end, { desc = "[T]oggle [T]ab size" })
+
+vim.keymap.set("n", "<leader>i", function()
+	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ 0 }), { 0 })
+end)
 
 -- vim: ts=2 sts=2 sw=2 et
