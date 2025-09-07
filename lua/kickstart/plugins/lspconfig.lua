@@ -232,19 +232,6 @@ return {
 						},
 					},
 				},
-
-				-- Included for use of html-lsp and htmx-lsp with .zmpl files (Jetzig Templater)
-				-- Also for tsx (react stuff)
-				-- FIXME: Change my html language server!!!! find alternative immediately!
-				html = {
-					filetypes = { "html", "htm", "typescriptreact", "typescript.tsx", "zmpl" },
-				},
-				htmx = {
-					filetypes = { "html", "htm", "htmx", "zmpl" },
-				},
-				tailwindcss = {
-					filetypes = { "html", "htm", "css", "typescriptreact", "typescript.tsx", "zmpl" },
-				},
 			}
 
 			-- Ensure the servers and tools above are installed
