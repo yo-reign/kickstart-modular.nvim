@@ -75,4 +75,6 @@ vim.opt.shiftwidth = 4 -- Size of an indent
 vim.opt.softtabstop = 4 -- Number of spaces a tab counts for while performing editing operations, like inserting a tab or using <BS>
 vim.opt.expandtab = true -- Converts tabs to spaces
 
+vim.opt.wrap = false -- Disable line wrapping
+
 -- vim: ts=2 sts=2 sw=2 et
