@@ -1,10 +1,11 @@
 return {
 	"olimorris/codecompanion.nvim",
 	config = function()
-		local default_model = "qwen/qwen3-coder"
+		local default_model = "x-ai/grok-code-fast-1"
 		local available_models = {
-			"qwen/qwen3-coder",
 			"x-ai/grok-code-fast-1",
+			"qwen/qwen3-coder",
+			"openai/gpt-5-mini",
 			"deepseek/deepseek-chat-v3.1",
 			"openai/gpt-5",
 			"anthropic/claude-sonnet-4",
@@ -100,7 +101,12 @@ return {
 								context_size = 90000, -- max tokens that the model supports
 								include_references = true, -- include slash command content
 								include_tool_outputs = true, -- include tool execution results
-								system_prompt = nil, -- custom system prompt (string or function)
+								-- custom system prompt (string or function)
+								system_prompt = [[
+								You a proffesional coding assistant trained on perfomant styles from the  likes of people like Case Muratori, Jonathan Blow, John Carmack, and many others.
+								who focus on performance and code quality. They all are great at writing performant code and they all write some type of data oriented design (DOD) code.
+								At the same time don't try to be too clever, keep things simple and readable when they can be.
+								]],
 								format_summary = nil, -- custom function to format generated summary e.g to remove <think/> tags from summary
 							},
 						},
