@@ -8,7 +8,7 @@ return {
 			"openai/gpt-5-mini",
 			"deepseek/deepseek-chat-v3.1",
 			"openai/gpt-5",
-			"anthropic/claude-sonnet-4",
+			"anthropic/claude-sonnet-4.5",
 			"anthropic/claude-opus-4.1",
 		}
 		local current_model = default_model
