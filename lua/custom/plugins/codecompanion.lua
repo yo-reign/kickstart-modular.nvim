@@ -7,6 +7,7 @@ return {
 			"qwen/qwen3-coder",
 			"openai/gpt-5-mini",
 			"deepseek/deepseek-chat-v3.1",
+			"anthropic/claude-haiku-4.5",
 			"openai/gpt-5",
 			"anthropic/claude-sonnet-4.5",
 		}
