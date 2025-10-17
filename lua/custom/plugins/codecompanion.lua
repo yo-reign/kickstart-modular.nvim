@@ -4,6 +4,7 @@ return {
 		local default_model = "x-ai/grok-code-fast-1"
 		local available_models = {
 			"x-ai/grok-code-fast-1",
+			"z-ai/glm-4.6",
 			"qwen/qwen3-coder",
 			"openai/gpt-5-mini",
 			"deepseek/deepseek-chat-v3.1",
