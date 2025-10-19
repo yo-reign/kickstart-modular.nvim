@@ -178,9 +178,9 @@ return {
 
 			-- CUSTOM
 			-- Setup custom zls lsp (currently pointing to zvm's bin which auto links to different versions)
-			vim.lsp.config("zls", {
-				cmd = { "zls" },
-			})
+			-- vim.lsp.config("zls", {
+			-- 	cmd = { "zls" },
+			-- })
 			-- require("lspconfig").zls.setup({
 			-- 	cmd = { "zls" },
 			-- 	settings = {
