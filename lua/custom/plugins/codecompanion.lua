@@ -1,10 +1,10 @@
 return {
 	"olimorris/codecompanion.nvim",
 	config = function()
-		local default_model = "x-ai/grok-code-fast-1"
+		local default_model = "z-ai/glm-4.6:exacto"
 		local available_models = {
 			"x-ai/grok-code-fast-1",
-			"z-ai/glm-4.6",
+			"z-ai/glm-4.6:exacto",
 			"qwen/qwen3-coder",
 			"openai/gpt-5-mini",
 			"deepseek/deepseek-chat-v3.1",
@@ -52,7 +52,7 @@ return {
 						-- Save all chats by default (disable to save only manually using 'sc')
 						auto_save = true,
 						-- Number of days after which chats are automatically deleted (0 to disable)
-						expiration_days = 0,
+						expiration_days = 30,
 						-- Picker interface (auto resolved to a valid picker)
 						picker = "telescope", --- ("telescope", "snacks", "fzf-lua", or "default")
 						---Optional filter function to control which chats are shown when browsing
