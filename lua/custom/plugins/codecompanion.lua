@@ -1,15 +1,14 @@
 return {
 	"olimorris/codecompanion.nvim",
 	config = function()
-		local default_model = "z-ai/glm-4.6:exacto"
+		local default_model = "openai/gpt-5.1-codex-mini"
 		local available_models = {
 			"x-ai/grok-code-fast-1",
 			"z-ai/glm-4.6:exacto",
-			"qwen/qwen3-coder",
-			"openai/gpt-5-mini",
 			"deepseek/deepseek-chat-v3.1",
 			"anthropic/claude-haiku-4.5",
-			"openai/gpt-5-codex",
+			"openai/gpt-5.1-codex-mini",
+			"openai/gpt-5.1-codex",
 			"anthropic/claude-sonnet-4.5",
 		}
 		local current_model = default_model
@@ -50,9 +49,9 @@ return {
 						-- Keymap to save the current chat manually (when auto_save is disabled)
 						save_chat_keymap = "sc",
 						-- Save all chats by default (disable to save only manually using 'sc')
-						auto_save = true,
+						auto_save = false,
 						-- Number of days after which chats are automatically deleted (0 to disable)
-						expiration_days = 30,
+						expiration_days = 60,
 						-- Picker interface (auto resolved to a valid picker)
 						picker = "telescope", --- ("telescope", "snacks", "fzf-lua", or "default")
 						---Optional filter function to control which chats are shown when browsing
@@ -99,13 +98,13 @@ return {
 							generation_opts = {
 								adapter = nil, -- defaults to current chat adapter
 								model = nil, -- defaults to current chat model
-								context_size = 90000, -- max tokens that the model supports
+								context_size = 100000, -- max tokens that the model supports
 								include_references = true, -- include slash command content
 								include_tool_outputs = true, -- include tool execution results
 								-- custom system prompt (string or function)
 								system_prompt = [[
-								You a proffesional coding assistant trained on perfomant styles from the  likes of people like Case Muratori, Jonathan Blow, John Carmack, and many others.
-								who focus on performance and code quality. They all are great at writing performant code and they all write some type of data oriented design (DOD) code.
+								You a proffesional coding assistant trained on perfomant styles from the likes of people like Case Muratori, Jonathan Blow, John Carmack, and many others
+								who focus on both performance and code quality. They all are great at writing performant code and they all write some type of data oriented design (DOD) code.
 								At the same time don't try to be too clever, keep things simple and readable when they can be.
 								]],
 								format_summary = nil, -- custom function to format generated summary e.g to remove <think/> tags from summary
