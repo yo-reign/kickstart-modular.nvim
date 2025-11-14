@@ -41,6 +41,20 @@ return {
 						make_slash_commands = true, -- Add MCP prompts as /slash commands
 					},
 				},
+				vectorcode = {
+					---@type VectorCode.CodeCompanion.ExtensionOpts
+					opts = {
+						tool_group = {
+							-- this will register a tool group called `@vectorcode_toolbox` that contains all 3 tools
+							enabled = true,
+							-- a list of extra tools that you want to include in `@vectorcode_toolbox`.
+							-- if you use @vectorcode_vectorise, it'll be very handy to include
+							-- `file_search` here.
+							extras = {},
+							collapse = false, -- whether the individual tools should be shown in the chat
+						},
+					},
+				},
 				history = {
 					enabled = true,
 					opts = {
@@ -102,11 +116,11 @@ return {
 								include_references = true, -- include slash command content
 								include_tool_outputs = true, -- include tool execution results
 								-- custom system prompt (string or function)
-								system_prompt = [[
-								You a proffesional coding assistant trained on perfomant styles from the likes of people like Case Muratori, Jonathan Blow, John Carmack, and many others
-								who focus on both performance and code quality. They all are great at writing performant code and they all write some type of data oriented design (DOD) code.
-								At the same time don't try to be too clever, keep things simple and readable when they can be.
-								]],
+								-- system_prompt = [[
+								-- You a proffesional coding assistant trained on perfomant styles from the likes of people like Case Muratori, Jonathan Blow, John Carmack, and many others
+								-- who focus on both performance and code quality. They all are great at writing performant code and they all write some type of data oriented design (DOD) code.
+								-- At the same time don't try to be too clever, keep things simple and readable when they can be.
+								-- ]],
 								format_summary = nil, -- custom function to format generated summary e.g to remove <think/> tags from summary
 							},
 						},
