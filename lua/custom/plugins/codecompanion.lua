@@ -1,7 +1,7 @@
 return {
 	"olimorris/codecompanion.nvim",
 	config = function()
-		local default_model = "openai/gpt-5.1-codex-mini"
+		local default_model = "google/gemini-3-pro-preview"
 		local available_models = {
 			"x-ai/grok-code-fast-1",
 			"z-ai/glm-4.6:exacto",
@@ -9,6 +9,7 @@ return {
 			"anthropic/claude-haiku-4.5",
 			"openai/gpt-5.1-codex-mini",
 			"openai/gpt-5.1-codex",
+			"google/gemini-3-pro-preview",
 			"anthropic/claude-sonnet-4.5",
 		}
 		local current_model = default_model
