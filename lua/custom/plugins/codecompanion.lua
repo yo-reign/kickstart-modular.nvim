@@ -1,9 +1,9 @@
 return {
 	"olimorris/codecompanion.nvim",
 	config = function()
-		local default_model = "deepseek/deepseek-v3.2-speciale"
+		local default_model = "moonshotai/kimi-k2-thinking"
 		local available_models = {
-			"deepseek/deepseek-v3.2-speciale",
+			"moonshotai/kimi-k2-thinking",
 			"z-ai/glm-4.6:exacto",
 			"anthropic/claude-haiku-4.5",
 			"openai/gpt-5.1-codex",
