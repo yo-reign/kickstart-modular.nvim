@@ -29,6 +29,7 @@ return {
 
 			-- Useful for getting pretty icons, but requires a Nerd Font.
 			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
+			{ "nvim-telescope/telescope-media-files.nvim" },
 		},
 		config = function()
 			-- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -66,12 +67,18 @@ return {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown(),
 					},
+					media_files = {
+						-- filetypes whitelist
+						filetypes = { "png", "jpg", "jpeg", "webp", "mp4", "webm", "ogv", "gif", "pdf" },
+						find_cmd = "rg", -- find command (defaults to `fd`)
+					},
 				},
 			})
 
 			-- Enable Telescope extensions if they are installed
 			pcall(require("telescope").load_extension, "fzf")
 			pcall(require("telescope").load_extension, "ui-select")
+			pcall(require("telescope").load_extension, "media_files")
 
 			-- See `:help telescope.builtin`
 			local builtin = require("telescope.builtin")
