@@ -41,20 +41,6 @@ return {
 						make_slash_commands = true, -- Add MCP prompts as /slash commands
 					},
 				},
-				vectorcode = {
-					---@type VectorCode.CodeCompanion.ExtensionOpts
-					opts = {
-						tool_group = {
-							-- this will register a tool group called `@vectorcode_toolbox` that contains all 3 tools
-							enabled = true,
-							-- a list of extra tools that you want to include in `@vectorcode_toolbox`.
-							-- if you use @vectorcode_vectorise, it'll be very handy to include
-							-- `file_search` here.
-							extras = {},
-							collapse = false, -- whether the individual tools should be shown in the chat
-						},
-					},
-				},
 				history = {
 					enabled = true,
 					opts = {
@@ -123,24 +109,6 @@ return {
 								-- ]],
 								format_summary = nil, -- custom function to format generated summary e.g to remove <think/> tags from summary
 							},
-						},
-
-						-- Memory system (requires VectorCode CLI)
-						memory = {
-							-- Automatically index summaries when they are generated
-							auto_create_memories_on_summary_generation = true,
-							-- Path to the VectorCode executable
-							vectorcode_exe = "vectorcode",
-							-- Tool configuration
-							tool_opts = {
-								-- Default number of memories to retrieve
-								default_num = 10,
-							},
-							-- Enable notifications for indexing progress
-							notify = true,
-							-- Index all existing memories on startup
-							-- (requires VectorCode 0.6.12+ for efficient incremental indexing)
-							index_on_startup = false,
 						},
 					},
 				},
