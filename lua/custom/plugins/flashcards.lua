@@ -8,7 +8,8 @@ return {
 	},
 	config = function()
 		require("flashcards").setup({
-			directories = { "~/notes" },
+			directories = { "~/notes/flashcards/" },
+			db_path = "~/notes/assets/",
 			fsrs = {
 				target_correctness = 0.85, -- 85% target retention
 			},

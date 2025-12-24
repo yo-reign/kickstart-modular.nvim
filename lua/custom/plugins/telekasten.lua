@@ -3,7 +3,7 @@ return {
 	dependencies = { "nvim-telescope/telescope.nvim", "nvim-telekasten/calendar-vim" },
 	config = function()
 		require("telekasten").setup({
-			home = vim.fn.expand("~/zettelkasten"),
+			home = vim.fn.expand("~/notes/zettelkasten"),
 		})
 
 		vim.keymap.set("n", "<leader>zkp", ":Telekasten panel<CR>", { desc = "Open telekasten panel" })
