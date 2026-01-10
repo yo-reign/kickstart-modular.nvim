@@ -55,7 +55,7 @@ require("lazy").setup({
 	require("kickstart.plugins.debug"),
 	require("kickstart.plugins.indent_line"),
 	require("kickstart.plugins.lint"),
-	require("kickstart.plugins.autopairs"),
+	--require("kickstart.plugins.autopairs"),
 	--require("kickstart.plugins.neo-tree"),
 	-- NOTE: Instead of the above plugin, I'm using another custom chosen plugin
 
