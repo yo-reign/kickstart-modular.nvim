@@ -4,14 +4,14 @@ return {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
 		"nvim-telescope/telescope.nvim",
-		"kkharji/sqlite.lua",
 	},
 	config = function()
 		require("flashcards").setup({
-			directories = { "~/notes/flashcards/" },
+			directories = { "~/notes/" },
+			storage = "json",
 			db_path = "~/notes/assets/",
 			fsrs = {
-				target_correctness = 0.85, -- 85% target retention
+				target_correctness = 0.90,
 			},
 		})
 
@@ -21,5 +21,6 @@ return {
 		vim.keymap.set("n", "<leader>fcr", ":FlashcardsReview<CR>", { desc = "Review flashcards" })
 		vim.keymap.set("n", "<leader>fcs", ":FlashcardsScan<CR>", { desc = "Scan for new flashcards" })
 		vim.keymap.set("n", "<leader>fcS", ":FlashcardsStats<CR>", { desc = "Show flashcard stats" })
+		vim.keymap.set("n", "<leader>fco", ":FlashcardsOrphans<CR>", { desc = "Manage orphaned cards" })
 	end,
 }
