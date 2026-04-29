@@ -77,4 +77,6 @@ vim.opt.expandtab = true -- Converts tabs to spaces
 
 vim.opt.wrap = true -- Enable line wrapping
 
+vim.opt.colorcolumn = "80" -- Add column indicator for long single line code
+
 -- vim: ts=2 sts=2 sw=2 et
