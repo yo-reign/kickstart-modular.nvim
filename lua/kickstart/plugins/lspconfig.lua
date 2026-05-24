@@ -217,6 +217,17 @@ return {
 				-- ts_ls = {},
 				--
 
+				vtsls = {
+					settings = {
+						vtsls = {
+							-- Effect's language service is installed per-project and loaded from
+							-- tsconfig.json via compilerOptions.plugins. Use the workspace TS SDK
+							-- so vtsls resolves @effect/language-service from project node_modules.
+							autoUseWorkspaceTsdk = true,
+						},
+					},
+				},
+
 				lua_ls = {
 					-- cmd = { ... },
 					-- filetypes = { ... },
@@ -254,24 +265,21 @@ return {
 				"vtsls",
 				"prettier",
 				"eslint_d",
-				"svelte-language-server",
+				-- "svelte-language-server",
 				-- END Web Development
 				"pyright",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
-			require("mason-lspconfig").setup({
-				handlers = {
-					function(server_name)
-						local server = servers[server_name] or {}
-						-- This handles overriding only values explicitly passed
-						-- by the server configuration above. Useful when disabling
-						-- certain features of an LSP (for example, turning off formatting for ts_ls)
-						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-						vim.lsp.config(server_name, server)
-					end,
-				},
-			})
+			for server_name, server in pairs(servers) do
+				-- This handles overriding only values explicitly passed by the server
+				-- configuration above. Useful when disabling certain features of an LSP
+				-- (for example, turning off formatting for ts_ls).
+				server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+				vim.lsp.config(server_name, server)
+			end
+
+			require("mason-lspconfig").setup()
 		end,
 	},
 }
