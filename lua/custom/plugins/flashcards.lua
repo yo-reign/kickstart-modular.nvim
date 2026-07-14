@@ -10,7 +10,7 @@ return {
 			directories = { "~/notes/" },
 			db_path = "~/notes/assets/",
 			fsrs = {
-				target_correctness = 0.90,
+				target_correctness = 0.95,
 			},
 		})
 
