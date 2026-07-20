@@ -24,6 +24,15 @@ return {
 			media = {
 				enabled = true,
 				roots = { "~/notes/" },
+				images = {
+					fit = "contain",
+					fit_modes = { "contain", "cover", "stretch" },
+				},
+			},
+			ui = {
+				keymaps = {
+					cycle_image_fit = "i",
+				},
 			},
 			fsrs = {
 				target_correctness = 0.95,
