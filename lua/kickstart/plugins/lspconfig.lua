@@ -268,6 +268,7 @@ return {
 				-- Writing and Markdown
 				"markdown-oxide",
 				"proselint",
+				"write-good",
 				-- "svelte-language-server",
 				-- END Web Development
 				"pyright",

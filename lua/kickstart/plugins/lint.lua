@@ -6,8 +6,8 @@ return {
 		config = function()
 			local lint = require("lint")
 			lint.linters_by_ft = {
-				markdown = { "proselint" },
-				text = { "proselint" },
+				markdown = { "proselint", "write_good" },
+				text = { "proselint", "write_good" },
 			}
 
 			-- To allow other plugins to add linters to require('lint').linters_by_ft,
