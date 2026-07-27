@@ -265,6 +265,9 @@ return {
 				"vtsls",
 				"prettier",
 				"eslint_d",
+				-- Writing and Markdown
+				"markdown-oxide",
+				"proselint",
 				-- "svelte-language-server",
 				-- END Web Development
 				"pyright",
